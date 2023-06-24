@@ -1,0 +1,4 @@
+model,accurary
+ANN,0.840909064
+CNN,0.909090936
+DenseNet121,0.977272749

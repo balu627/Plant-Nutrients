@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Identification of Plant Nutrient Deficiencies</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    <!-- https://fonts.google.com/specimen/Roboto -->
+    <link rel="stylesheet" href="static/css/fontawesome.min.css">
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="static/css/templatemo-style.css">
+    <!--
+	Product Admin CSS Template
+	https://templatemo.com/tm-524-product-admin
+	-->
+</head>
+
+<body id="Home">
+<div class="" id=Home>
+    <nav class="navbar navbar-expand-xl">
+        <div class="container h-100">
+            <a class="navbar-brand" href="/">
+                <h1 class="tm-site-title mb-0">Plant Nutrient Deficiencies</h1>
+            </a>
+            <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars tm-nav-icon"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto h-100">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <i class="fas fa-tree"></i>Introduction
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about')}}">
+                            <i class="fas fa-info"></i> About
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/upload">
+                            <i class="fas fa-upload"></i>Upload
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h4 class="text-white mt-1 mt-1">Plant Nutrient</h4>
+            </div>
+        </div>
+        <br>
+        <div class="stlye">
+            <h5 class="tm-white mb-6 text-white">INTRODUCTION</h5>
+            <div class="about-image">
+                <p class="text-white mt-5 mb-8">Nutrient is a vital factor that strongly determines many aspects of a plant’s life cycle such as growth rate, productivity,and fertilization. Deficiencies in any essential nutrient would significantly affect these processes and cause a severe loss in agriculture. Nutrient deficiencies also result in an unusual appearance of a plant especially on its leaves. This visual symptom could be identified by eyes, typically around a week  after nutrient deficiencies began; hence, it could signify a presence of deficiencies. Example of symptoms caused by various nutrient deficiencies are illustrated. However, nutrient deficiency analysis by eyes requires domain expertise and is not robust, especially in the early stage of deficiency where an unusual appearance has not clearly been noticeable.</p>
+                <img src="static/img/plant.jpg" style="margin-right:50px;">
+                <img src="static/img/deff.jpg" style="margin-left:50px;">
+            </div>
+            <hr>
+            <p class="text-white mt-5 mb-8">Plant health and food safety are closely linked. The Food and Agriculture Organization of the United Nations (FAO) estimates that pests and diseases lead to the loss of 20–40% of global food production, constituting a threat to food security. Using pesticides is a way of protecting crops from these infestations and thus preserve yields. Their use has been one of the factors behind the increase in food production since the 1950s, enabling it to meet the needs of a growing population. However, the use of such substances is not environmentally harmless. Applying these substances negatively impacts biodiversity, including insect, bird, and fish populations, as well as soil, air, and water quality Knowledge of a fields' phytosanitary conditions is a decisive factor in limiting the use of pesticides while protecting harvests. Indeed, it enables farmers to carry out proper practices in the right place and at the right time. However, assessing the healthiness of fields is not simple, and it requires a high level of expertise. Indeed, a disease can be expressed differently from one plant species to another, or even from one variety to another. A given symptom may be the result of different problems, and these problems may also combine on the same plant.</p>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<script src="static/js/jquery-3.3.1.min.js"></script>
+<!-- https://jquery.com/download/ -->
+<script src="static/js/moment.min.js"></script>
+<!-- https://momentjs.com/ -->
+<script src="static/js/Chart.min.js"></script>
+<!-- http://www.chartjs.org/docs/latest/ -->
+<script src="static/js/bootstrap.min.js"></script>
+<!-- https://getbootstrap.com/ -->
+<script src="static/js/tooplate-scripts.js"></script>
+<script>
+        Chart.defaults.global.defaultFontColor = 'white';
+        let ctxLine,
+            ctxBar,
+            ctxPie,
+            optionsLine,
+            optionsBar,
+            optionsPie,
+            configLine,
+            configBar,
+            configPie,
+            lineChart;
+        barChart, pieChart;
+        // DOM is ready
+        $(function () {
+            drawLineChart(); // Line Chart
+            drawBarChart(); // Bar Chart
+            drawPieChart(); // Pie Chart
+
+            $(window).resize(function () {
+                updateLineChart();
+                updateBarChart();                
+            });
+        })
+    </script>
+</body>
+
+</html>
